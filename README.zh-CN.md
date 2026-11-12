@@ -2,9 +2,27 @@
 
 [English](README.md) | **简体中文**
 
+> **本项目基于 [AInVFX/ainvfx-fluid](https://huggingface.co/AInVFX/ainvfx-fluid) 构建。** 这是围绕 AInVFX Fluid（LTX-2.5 的 IC-LoRA）做的离线创作软件（界面 + 流程）。LoRA 与训练数据由 AInVFX 团队发布在 Hugging Face；本仓库不包含任何模型。
+
 用画笔画出烟、蒸汽、火、爆炸、水、尘、雾、云的**形状**，软件把色块变成真实流体特效，并自动补出关键帧之间的运动。视频生成**全程离线**，使用本机显卡（LTX-2.5 + AInVFX Fluid IC-LoRA，经固定版本的 ComfyUI 后端）。
 
 > **本仓库只提供项目框架，不包含、也不再分发任何模型权重。** 模型请从下方官方页面自行下载，并在对应页面同意其许可。
+
+## 演示
+官方演示案例（共 8 个，每个 5 秒、24 帧/秒）。每张 GIF 的**左边是控制视频**（用来驱动特效的纯色色块），**右边是生成结果**。原画质 MP4 在 [`examples/official-demos/`](examples/official-demos/)。
+
+| 案例 | 左：控制视频 → 右：生成结果 | 原始 MP4 |
+|---|---|---|
+| 山坡山火浓烟 | ![01](examples/official-demos/previews/01.gif) | [control](examples/official-demos/01_control.mp4) · [result](examples/official-demos/01_result.mp4) |
+| 烟囱排烟 | ![02](examples/official-demos/previews/02.gif) | [control](examples/official-demos/02_control.mp4) · [result](examples/official-demos/02_result.mp4) |
+| 黑底烟柱（可叠加素材） | ![03](examples/official-demos/previews/03.gif) | [control](examples/official-demos/03_control.mp4) · [result](examples/official-demos/03_result.mp4) |
+| 黑底火球（可叠加素材） | ![04](examples/official-demos/previews/04.gif) | [control](examples/official-demos/04_control.mp4) · [result](examples/official-demos/04_result.mp4) |
+| 竖屏火焰 | ![05](examples/official-demos/previews/05.gif) | [control](examples/official-demos/05_control.mp4) · [result](examples/official-demos/05_result.mp4) |
+| 沙漠爆炸 | ![06](examples/official-demos/previews/06.gif) | [control](examples/official-demos/06_control.mp4) · [result](examples/official-demos/06_result.mp4) |
+| 海浪 | ![08](examples/official-demos/previews/08.gif) | [control](examples/official-demos/08_control.mp4) · [result](examples/official-demos/08_result.mp4) |
+| 彩色烟雾文字 | ![09](examples/official-demos/previews/09.gif) | [control](examples/official-demos/09_control.mp4) · [result](examples/official-demos/09_result.mp4) |
+
+> 这些视频来自 AInVFX Fluid 官方演示（<https://huggingface.co/AInVFX/ainvfx-fluid>），版权归原作者，此处仅用于说明工作流程；LTX-2.x 模型的输出仍受 [LTX-2.x 社区许可](https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x) 约束。
 
 ## 运行要求
 - Windows 10/11 64 位；NVIDIA 显卡，按 **16GB 显存**设计与测试（≤12GB 未测试）；建议 64GB 内存；驱动 580+。
