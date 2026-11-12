@@ -1,0 +1,33 @@
+# Secrets / 凭证 —— 绝不提交
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.civitai_token
+*token*.txt
+runtime/
+
+# Heavy / user data / 体积大或用户数据
+engine/python/
+engine/ComfyUI/
+engine/_dl/
+engine/build.log
+engine/extra_model_paths.dev.yaml
+tools/ffmpeg/
+models/**
+!models/**/
+!models/**/.gitkeep
+projects/
+output/
+*.safetensors
+*.gguf
+*.ckpt
+*.pt
+*.pth
+
+# Build / caches
+node_modules/
+__pycache__/
+*.pyc
+*.tmp

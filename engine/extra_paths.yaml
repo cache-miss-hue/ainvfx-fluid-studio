@@ -1,0 +1,9 @@
+# 包内引擎路径（相对本文件所在的 engine/ 目录）。
+fx_studio_models:
+  base_path: ../models
+  diffusion_models: diffusion_models
+  text_encoders: text_encoders
+  vae: vae
+  loras: loras
+fx_studio_nodes:
+  custom_nodes: ../app/engine_nodes

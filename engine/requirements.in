@@ -1,0 +1,45 @@
+# 引擎顶层依赖（版本由 constraints.lock 锁定，来自原机 python_embeded 的实测版本）
+torch
+torchvision
+torchaudio
+torchsde
+numpy
+einops
+transformers
+tokenizers
+sentencepiece
+safetensors
+aiohttp
+yarl
+pyyaml
+Pillow
+scipy
+tqdm
+psutil
+alembic
+SQLAlchemy
+filelock
+av
+comfy-kitchen
+comfy-aimdo
+requests
+simpleeval
+blake3
+kornia
+spandrel
+pydantic
+pydantic-settings
+comfyui-frontend-package
+# ComfyUI-GGUF
+gguf
+protobuf
+# ComfyUI-LTXVideo
+colour-science
+diffusers
+huggingface_hub
+ninja
+# 应用服务
+fastapi
+uvicorn
+python-multipart
+websockets

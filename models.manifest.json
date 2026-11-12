@@ -1,0 +1,50 @@
+{
+  "_说明": "唯一的模型清单。path 为相对 models/ 的路径；sha256 为官方文件校验值。本仓库不含模型文件，下载地址见 README。",
+  "models": [
+    {
+      "key": "unet",
+      "path": "diffusion_models/ltx-2.5-22b-distilled-transformer-comfy-int8-convrot.safetensors",
+      "size": 21504034224,
+      "sha256": "c4279eeff115cbeaca494bd2183e7d768c38fe85a184dc6afbb7159157c44334",
+      "required": true,
+      "license": "LTX-2 Community License (Lightricks)"
+    },
+    {
+      "key": "text_encoder",
+      "path": "text_encoders/gemma4-12b-with-proj-ltx-2.5-Q4_K_M.gguf",
+      "size": 8414653376,
+      "sha256": "add54057106a531383711accfaf17e341e234cbe953fdafbc6cd6b309fb5e356",
+      "required": true,
+      "license": "Gemma 4 (Apache-2.0) / 以仓库页面为准 + LTX-2.x Community License"
+    },
+    {
+      "key": "video_vae",
+      "path": "vae/ltx-2.5-video-vae-bf16.safetensors",
+      "size": 1472223346,
+      "sha256": "847e14ca7f3355debca0cea4eaa24ac0fbcdf0061da054ac89ca638a869ddba3",
+      "required": true,
+      "license": "LTX-2 Community License (Lightricks)"
+    },
+    {
+      "key": "audio_vae",
+      "path": "vae/ltx-2.5-audio-vae-bf16.safetensors",
+      "size": 364866540,
+      "sha256": "c52733d37f6a7fb7949c3dc0fb468c6cb2169e4d836983a73babb9f0d54837a5",
+      "required": true,
+      "license": "LTX-2 Community License (Lightricks)"
+    },
+    {
+      "key": "ic_lora",
+      "path": "loras/ainvfx-fluid.safetensors",
+      "size": 654446320,
+      "sha256": "167b4ccfd3ed5e95c7973a0233f8fbd8edb5e9182ecb3998bd972661c861ebaa",
+      "required": true,
+      "license": "LTX-2.x Community License（见 HuggingFace AInVFX/ainvfx-fluid）"
+    }
+  ],
+  "exclude": [
+    "gemma4-12b-with-proj-ltx-2.5-comfy-int8-convrot.safetensors",
+    "gemma4_e2b_it_int8_convrot.safetensors",
+    "ltx-2.5-22b-dev-UD-Q3_K_XL.gguf"
+  ]
+}

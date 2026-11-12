@@ -1,0 +1,73 @@
+{
+ "version": 1,
+ "name": "示例：坦克爆炸",
+ "created": 1794437257.520475,
+ "seconds": 2,
+ "scheme": 1,
+ "keyframes": [
+  {
+   "id": "k_first",
+   "index": 0
+  },
+  {
+   "id": "k_tail",
+   "index": -1,
+   "tail": true
+  }
+ ],
+ "snap": true,
+ "base_mode": 1,
+ "blur_radius": 12,
+ "blur_sigma": 4,
+ "colors": 8,
+ "reference": {
+  "type": "image",
+  "file": "reference/reference.png",
+  "original_name": "ainvfx_tank_demo.png",
+  "start25": 0,
+  "width": 2048,
+  "height": 1153
+ },
+ "width": 1024,
+ "height": 576,
+ "seed": 42,
+ "lora_strength": 1,
+ "tile_size": 512,
+ "prompt": {
+  "scene": "雪地上一辆白色坦克，晴朗的蓝天",
+  "scene_en": "A white tank on the snow, clear blue sky.",
+  "effect": "explosion",
+  "effect_desc": "",
+  "effect_desc_en": "",
+  "camera": "static camera",
+  "nothing_else": true,
+  "final": "ainvfxfluid, a white tank on the snow, clear blue sky, an orange fireball explosion bursts and thick black smoke billows upward, static camera, nothing else in sight",
+  "final_edited": false
+ },
+ "palette": [
+  {
+   "name": "火焰·橙",
+   "color": "#ff7814"
+  },
+  {
+   "name": "火焰·黄",
+   "color": "#ffd73c"
+  },
+  {
+   "name": "浓烟·深灰",
+   "color": "#464648"
+  },
+  {
+   "name": "浅灰烟",
+   "color": "#a0a0a0"
+  },
+  {
+   "name": "白（蒸汽/云）",
+   "color": "#ffffff"
+  },
+  {
+   "name": "浅蓝（水）",
+   "color": "#8cc8ff"
+  }
+ ]
+}

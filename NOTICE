@@ -1,0 +1,12 @@
+AInVFX Fluid Studio
+Copyright 2026 cache-miss-hue (https://github.com/cache-miss-hue)
+
+Licensed under the Apache License, Version 2.0 (see LICENSE), except app/engine_nodes/,
+which is licensed under GPL-3.0 (see app/engine_nodes/LICENSE) because it is loaded
+in-process by ComfyUI (GPL-3.0).
+
+This repository contains NO model weights and NO third-party binaries.
+Third-party software that the setup script downloads at the user's request keeps its own license:
+ComfyUI (GPL-3.0), ComfyUI-LTXVideo (LTX-2 Community License), ComfyUI-GGUF (Apache-2.0, fork by molbal),
+Python (PSF), PyTorch and other Python packages (see their own licenses), FFmpeg (LGPL/GPL, per build).
+Copies of the license texts are in licenses/.

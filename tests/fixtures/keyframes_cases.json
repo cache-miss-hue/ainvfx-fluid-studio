@@ -1,0 +1,501 @@
+[
+ {
+  "name": "首尾 5 秒",
+  "project": {
+   "seconds": 5,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "k_tail",
+     "index": -1,
+     "tail": true
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 5,
+   "last": 120,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    120
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "k_tail",
+    "index": 120,
+    "tail": true
+   }
+  ]
+ },
+ {
+  "name": "每秒一帧 3 秒",
+  "project": {
+   "seconds": 3,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 25
+    },
+    {
+     "id": "b",
+     "index": 49
+    },
+    {
+     "id": "k_tail",
+     "index": -1,
+     "tail": true
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 3,
+   "last": 72,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    72
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "a",
+    "index": 25,
+    "tail": false
+   },
+   {
+    "id": "b",
+    "index": 49,
+    "tail": false
+   },
+   {
+    "id": "k_tail",
+    "index": 72,
+    "tail": true
+   }
+  ]
+ },
+ {
+  "name": "吸附到 8k+1",
+  "project": {
+   "seconds": 5,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 30
+    },
+    {
+     "id": "b",
+     "index": 36
+    },
+    {
+     "id": "c",
+     "index": 44
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 5,
+   "last": 120,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    120
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "a",
+    "index": 33,
+    "tail": false
+   },
+   {
+    "id": "c",
+    "index": 41,
+    "tail": false
+   }
+  ]
+ },
+ {
+  "name": "不吸附保持原位",
+  "project": {
+   "seconds": 5,
+   "snap": false,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 30
+    },
+    {
+     "id": "b",
+     "index": 44
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 5,
+   "last": 120,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    120
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "a",
+    "index": 30,
+    "tail": false
+   },
+   {
+    "id": "b",
+    "index": 44,
+    "tail": false
+   }
+  ]
+ },
+ {
+  "name": "超出时长的被隐藏",
+  "project": {
+   "seconds": 1,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 30
+    },
+    {
+     "id": "k_tail",
+     "index": -1,
+     "tail": true
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 1,
+   "last": 24,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    24
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "k_tail",
+    "index": 24,
+    "tail": true
+   }
+  ]
+ },
+ {
+  "name": "吸附后撞到同一帧：只留一个",
+  "project": {
+   "seconds": 5,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 31
+    },
+    {
+     "id": "b",
+     "index": 35
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 5,
+   "last": 120,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    120
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "a",
+    "index": 33,
+    "tail": false
+   }
+  ]
+ },
+ {
+  "name": "与尾帧同帧：尾帧优先",
+  "project": {
+   "seconds": 2,
+   "snap": false,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 48
+    },
+    {
+     "id": "k_tail",
+     "index": -1,
+     "tail": true
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 2,
+   "last": 48,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    48
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "k_tail",
+    "index": 48,
+    "tail": true
+   }
+  ]
+ },
+ {
+  "name": "吸附到 1",
+  "project": {
+   "seconds": 5,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 2
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 5,
+   "last": 120,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    97,
+    105,
+    113,
+    120
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "a",
+    "index": 1,
+    "tail": false
+   }
+  ]
+ },
+ {
+  "name": "最后一个网格点靠近尾帧",
+  "project": {
+   "seconds": 4,
+   "snap": true,
+   "keyframes": [
+    {
+     "id": "k_first",
+     "index": 0
+    },
+    {
+     "id": "a",
+     "index": 95
+    },
+    {
+     "id": "k_tail",
+     "index": -1,
+     "tail": true
+    }
+   ]
+  },
+  "timeline": {
+   "seconds": 4,
+   "last": 96,
+   "grid": [
+    0,
+    1,
+    9,
+    17,
+    25,
+    33,
+    41,
+    49,
+    57,
+    65,
+    73,
+    81,
+    89,
+    96
+   ]
+  },
+  "expected": [
+   {
+    "id": "k_first",
+    "index": 0,
+    "tail": false
+   },
+   {
+    "id": "k_tail",
+    "index": 96,
+    "tail": true
+   }
+  ]
+ }
+]
