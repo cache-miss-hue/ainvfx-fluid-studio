@@ -9,15 +9,12 @@ Paint the *shape* of smoke, steam, fire, explosions, water, dust, fog or clouds 
 ## Requirements
 - Windows 10/11 64-bit, NVIDIA GPU (designed and tested on **16 GB VRAM**; ≤12 GB untested), 64 GB RAM recommended, driver 580+.
 - ~35 GB free disk (models ≈ 32 GB + engine ≈ 4 GB).
-- Git Bash (for the setup script); Node.js 18+ only if you want to rebuild the web UI.
+- Git for Windows (setup runs through its Git Bash); Node.js 18+ only if you want to rebuild the web UI.
 
 ## Setup
-1. **Build the engine** (Python 3.12 embeddable + pinned ComfyUI + custom nodes; needs internet, set `HTTPS_PROXY` if required):
-   ```bash
-   bash scripts/build_engine.sh
-   ```
-2. **FFmpeg**: download a Windows build from <https://www.gyan.dev/ffmpeg/builds/> or <https://github.com/BtbN/FFmpeg-Builds> and put `ffmpeg.exe` and `ffprobe.exe` (plus DLLs for a shared build) into `tools/ffmpeg/`.
-3. **Download models** into `models/` (keep the file names). The in-app "Self-check" compares file sizes; SHA-256 values are in `models.manifest.json`.
+1. Install [Git for Windows](https://git-scm.com/download/win) (needed once), then clone this repository.
+2. Double-click **`setup.bat`**. It downloads and builds everything except the models: embeddable Python 3.12, dependencies (incl. PyTorch CUDA, the large part), the pinned ComfyUI + custom nodes, and FFmpeg (~4 GB, needs internet; set `HTTPS_PROXY` if you need a proxy). It can be re-run safely; finished steps are skipped.
+3. **Download the 5 models** into `models/` (see below; keep the file names). The in-app "Self-check" compares file sizes; SHA-256 values are in `models.manifest.json`.
 4. Double-click `start.bat` (local only) or `start_lan.bat` (tablet/pen over LAN, token protected).
 
 ## Model downloads

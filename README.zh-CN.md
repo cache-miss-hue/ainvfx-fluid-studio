@@ -9,15 +9,12 @@
 ## 运行要求
 - Windows 10/11 64 位；NVIDIA 显卡，按 **16GB 显存**设计与测试（≤12GB 未测试）；建议 64GB 内存；驱动 580+。
 - 约 35GB 磁盘空间（模型约 32GB + 引擎约 4GB）。
-- 需要 Git Bash 运行安装脚本；只有想重新构建网页界面时才需要 Node.js 18+。
+- 需要 Git for Windows（安装脚本通过其 Git Bash 运行）；只有想重新构建网页界面时才需要 Node.js 18+。
 
 ## 安装
-1. **构建引擎**（Python 3.12 嵌入版 + 固定版本 ComfyUI + 节点包；需联网，必要时设 `HTTPS_PROXY`）：
-   ```bash
-   bash scripts/build_engine.sh
-   ```
-2. **FFmpeg**：从 <https://www.gyan.dev/ffmpeg/builds/> 或 <https://github.com/BtbN/FFmpeg-Builds> 下载 Windows 版，把 `ffmpeg.exe`、`ffprobe.exe`（共享版还需 DLL）放进 `tools/ffmpeg/`。
-3. **下载模型**到 `models/` 对应子目录（文件名不要改）。启动后右上角“自检”会检查文件是否齐全、大小是否正确；SHA-256 见 `models.manifest.json`。
+1. 安装 [Git for Windows](https://git-scm.com/download/win)（只需一次），然后克隆本仓库。
+2. 双击 **`setup.bat`**。它会自动下载并构建除模型以外的所有东西：Python 3.12 嵌入版、依赖（含 PyTorch CUDA，体积最大）、固定版本的 ComfyUI 与节点包、FFmpeg（共约 4GB，需联网；需要代理请先设置 `HTTPS_PROXY`）。可重复运行，已完成的步骤会跳过。
+3. **下载 5 个模型**到 `models/` 对应子目录（见下表，文件名不要改）。启动后右上角“自检”会检查文件是否齐全、大小是否正确；SHA-256 见 `models.manifest.json`。
 4. 双击 `start.bat`（仅本机）或 `start_lan.bat`（平板手写笔，局域网 + 口令保护）。
 
 ## 模型下载
