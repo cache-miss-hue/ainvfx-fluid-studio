@@ -9,18 +9,18 @@
 > **本仓库只提供项目框架，不包含、也不再分发任何模型权重。** 模型请从下方官方页面自行下载，并在对应页面同意其许可。
 
 ## 演示
-官方演示案例（共 8 个，每个 5 秒、24 帧/秒）。**输入**是你画的关键帧画面（纯色色块，只在对应时间点有内容），**输出**是据此生成的视频。原画质 MP4（含完整控制视频）在 [`examples/official-demos/`](examples/official-demos/)。
+官方演示案例（共 8 个，每个 5 秒、24 帧/秒）。**输入**是你画的关键帧画面（纯色色块），**输出**是据此生成的视频。原画质 MP4（含完整控制视频）在 [`examples/official-demos/`](examples/official-demos/)。
 
-| 案例 | 输入：关键帧画面（时间顺序） | 输出：生成结果 | 原始 MP4 |
+| 案例 | 输入：关键帧画面 | 输出：生成结果 | 原始 MP4 |
 |---|---|---|---|
-| 山坡山火浓烟 | <img src="examples/official-demos/inputs/01_f000.png" width="90"> <img src="examples/official-demos/inputs/01_f034.png" width="90"> <img src="examples/official-demos/inputs/01_f050.png" width="90"> <img src="examples/official-demos/inputs/01_f090.png" width="90"> <img src="examples/official-demos/inputs/01_f120.png" width="90"> | ![01](examples/official-demos/previews/01.gif) | [control](examples/official-demos/01_control.mp4) · [result](examples/official-demos/01_result.mp4) |
-| 烟囱排烟 | <img src="examples/official-demos/inputs/02_f000.png" width="150"> <img src="examples/official-demos/inputs/02_f120.png" width="150"> | ![02](examples/official-demos/previews/02.gif) | [control](examples/official-demos/02_control.mp4) · [result](examples/official-demos/02_result.mp4) |
-| 黑底烟柱（可叠加素材） | <img src="examples/official-demos/inputs/03_f000.png" width="150"> <img src="examples/official-demos/inputs/03_f120.png" width="150"> | ![03](examples/official-demos/previews/03.gif) | [control](examples/official-demos/03_control.mp4) · [result](examples/official-demos/03_result.mp4) |
-| 黑底火球（可叠加素材） | <img src="examples/official-demos/inputs/04_f000.png" width="150"> <img src="examples/official-demos/inputs/04_f120.png" width="150"> | ![04](examples/official-demos/previews/04.gif) | [control](examples/official-demos/04_control.mp4) · [result](examples/official-demos/04_result.mp4) |
-| 竖屏火焰 | <img src="examples/official-demos/inputs/05_f000.png" width="150"> <img src="examples/official-demos/inputs/05_f120.png" width="150"> | ![05](examples/official-demos/previews/05.gif) | [control](examples/official-demos/05_control.mp4) · [result](examples/official-demos/05_result.mp4) |
-| 沙漠爆炸 | <img src="examples/official-demos/inputs/06_f000.png" width="150"> <img src="examples/official-demos/inputs/06_f120.png" width="150"> | ![06](examples/official-demos/previews/06.gif) | [control](examples/official-demos/06_control.mp4) · [result](examples/official-demos/06_result.mp4) |
-| 海浪 | <img src="examples/official-demos/inputs/08_f000.png" width="150"> <img src="examples/official-demos/inputs/08_f120.png" width="150"> | ![08](examples/official-demos/previews/08.gif) | [control](examples/official-demos/08_control.mp4) · [result](examples/official-demos/08_result.mp4) |
-| 彩色烟雾文字 | <img src="examples/official-demos/inputs/09_f000.png" width="150"> <img src="examples/official-demos/inputs/09_f120.png" width="150"> | ![09](examples/official-demos/previews/09.gif) | [control](examples/official-demos/09_control.mp4) · [result](examples/official-demos/09_result.mp4) |
+| 山坡山火浓烟 | <img src="examples/official-demos/inputs/01_f000.png" width="170">| ![01](examples/official-demos/previews/01.gif) | [control](examples/official-demos/01_control.mp4) · [result](examples/official-demos/01_result.mp4) |
+| 烟囱排烟 | <img src="examples/official-demos/inputs/02_f000.png" width="170">| ![02](examples/official-demos/previews/02.gif) | [control](examples/official-demos/02_control.mp4) · [result](examples/official-demos/02_result.mp4) |
+| 黑底烟柱（可叠加素材） | <img src="examples/official-demos/inputs/03_f000.png" width="170">| ![03](examples/official-demos/previews/03.gif) | [control](examples/official-demos/03_control.mp4) · [result](examples/official-demos/03_result.mp4) |
+| 黑底火球（可叠加素材） | <img src="examples/official-demos/inputs/04_f000.png" width="170">| ![04](examples/official-demos/previews/04.gif) | [control](examples/official-demos/04_control.mp4) · [result](examples/official-demos/04_result.mp4) |
+| 竖屏火焰 | <img src="examples/official-demos/inputs/05_f000.png" width="170">| ![05](examples/official-demos/previews/05.gif) | [control](examples/official-demos/05_control.mp4) · [result](examples/official-demos/05_result.mp4) |
+| 沙漠爆炸 | <img src="examples/official-demos/inputs/06_f000.png" width="170">| ![06](examples/official-demos/previews/06.gif) | [control](examples/official-demos/06_control.mp4) · [result](examples/official-demos/06_result.mp4) |
+| 海浪 | <img src="examples/official-demos/inputs/08_f000.png" width="170">| ![08](examples/official-demos/previews/08.gif) | [control](examples/official-demos/08_control.mp4) · [result](examples/official-demos/08_result.mp4) |
+| 彩色烟雾文字 | <img src="examples/official-demos/inputs/09_f000.png" width="170">| ![09](examples/official-demos/previews/09.gif) | [control](examples/official-demos/09_control.mp4) · [result](examples/official-demos/09_result.mp4) |
 
 > 这些视频来自 AInVFX Fluid 官方演示（<https://huggingface.co/AInVFX/ainvfx-fluid>），版权归原作者，此处仅用于说明工作流程；LTX-2.x 模型的输出仍受 [LTX-2.x 社区许可](https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x) 约束。
 
