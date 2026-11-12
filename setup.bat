@@ -9,6 +9,12 @@ set "GITBASH="
 for %%P in ("%ProgramFiles%\Git\bin\bash.exe" "%ProgramFiles(x86)%\Git\bin\bash.exe" "%LocalAppData%\Programs\Git\bin\bash.exe") do (
   if exist %%~P if not defined GITBASH set "GITBASH=%%~P"
 )
+rem 装在非默认位置时：从 PATH 里的 git.exe 反推（...\Git\cmd\git.exe -> ...\Git\bin\bash.exe）
+if not defined GITBASH (
+  for /f "delims=" %%G in ('where git 2^>nul') do (
+    if exist "%%~dpG..\bin\bash.exe" if not defined GITBASH set "GITBASH=%%~dpG..\bin\bash.exe"
+  )
+)
 if not defined GITBASH (
   echo 未找到 Git Bash。请先安装 Git for Windows： https://git-scm.com/download/win
   echo Git Bash not found. Please install Git for Windows first, then run setup.bat again.
@@ -23,7 +29,7 @@ echo.
 if errorlevel 1 (
   echo.
   echo 安装失败。可以重新运行 setup.bat（已完成的步骤会跳过）；需要代理请先设置 HTTPS_PROXY。
-  echo Setup failed. Re-run setup.bat (finished steps are skipped). Set HTTPS_PROXY if you need a proxy.
+  echo Setup failed. Re-run setup.bat - finished steps are skipped. Set HTTPS_PROXY if you need a proxy.
   pause
   exit /b 1
 )
