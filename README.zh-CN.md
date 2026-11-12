@@ -24,6 +24,27 @@
 
 > 这些视频来自 AInVFX Fluid 官方演示（<https://huggingface.co/AInVFX/ainvfx-fluid>），版权归原作者，此处仅用于说明工作流程；LTX-2.x 模型的输出仍受 [LTX-2.x 社区许可](https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x) 约束。
 
+## 界面截图
+软件界面（左：工具与调色板，中：画布，右：参考图与提示词，下：时间轴）。
+
+![黑底素材：在关键帧上用纯色色块画出爆炸形状](docs/screenshots/01-paint-black-base.png)
+*黑底素材：在关键帧上用纯色色块画出爆炸形状*
+
+![黑底素材：生成的火球，可叠加到你的视频上](docs/screenshots/02-result-black-base.png)
+*黑底素材：生成的火球，可叠加到你的视频上*
+
+![参考图模式：在坦克照片上直接画出特效](docs/screenshots/03-paint-on-reference-image.png)
+*参考图模式：在坦克照片上直接画出特效*
+
+![参考图模式：生成的爆炸效果，坦克保持原样](docs/screenshots/04-result-on-reference-image.png)
+*参考图模式：生成的爆炸效果，坦克保持原样*
+
+![参考视频模式：在源视频条上选起始帧，并在时间轴上画关键帧](docs/screenshots/05-paint-on-reference-video-timeline.png)
+*参考视频模式：在源视频条上选起始帧，并在时间轴上画关键帧*
+
+![参考视频模式：在港口素材上生成的烟浪效果](docs/screenshots/06-result-on-reference-video.png)
+*参考视频模式：在港口素材上生成的烟浪效果*
+
 ## 运行要求
 - Windows 10/11 64 位；NVIDIA 显卡，按 **16GB 显存**设计与测试（≤12GB 未测试）；建议 64GB 内存；驱动 580+。
 - 约 35GB 磁盘空间（模型约 32GB + 引擎约 4GB）。

@@ -24,6 +24,27 @@ Official demo cases (8 cases, 5 s each, 24 fps). The **input** is the keyframe i
 
 > The clips come from the official AInVFX Fluid demos (<https://huggingface.co/AInVFX/ainvfx-fluid>); credit goes to their authors. They are shown here to illustrate the workflow, and outputs of LTX-2.x models remain subject to the [LTX-2.x Community License](https://github.com/Lightricks/LTX-2/blob/main/LICENSE-2_x).
 
+## Screenshots
+The studio UI (left: tools and palette, center: canvas, right: references and prompt, bottom: timeline).
+
+![Black base: paint flat color blobs for the explosion keyframe](docs/screenshots/01-paint-black-base.png)
+*Black base: paint flat color blobs for the explosion keyframe*
+
+![Black base: generated fireball, ready to composite over your footage](docs/screenshots/02-result-black-base.png)
+*Black base: generated fireball, ready to composite over your footage*
+
+![Reference image: paint the effect directly on top of a tank photo](docs/screenshots/03-paint-on-reference-image.png)
+*Reference image: paint the effect directly on top of a tank photo*
+
+![Reference image: the generated explosion with the tank kept in place](docs/screenshots/04-result-on-reference-image.png)
+*Reference image: the generated explosion with the tank kept in place*
+
+![Reference video: pick the start frame on the source strip and paint on the timeline](docs/screenshots/05-paint-on-reference-video-timeline.png)
+*Reference video: pick the start frame on the source strip and paint on the timeline*
+
+![Reference video: generated smoke and wave over the harbor footage](docs/screenshots/06-result-on-reference-video.png)
+*Reference video: generated smoke and wave over the harbor footage*
+
 ## Requirements
 - Windows 10/11 64-bit, NVIDIA GPU (designed and tested on **16 GB VRAM**; ≤12 GB untested), 64 GB RAM recommended, driver 580+.
 - ~35 GB free disk (models ≈ 32 GB + engine ≈ 4 GB).
